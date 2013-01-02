@@ -15,6 +15,7 @@ var options = {
 
 https.createServer(options, serve).listen(8000);
 
+
 function serve (req, res) {
   var mode = req.url.split('/').pop();
 
@@ -28,10 +29,6 @@ function serve (req, res) {
 
     if (!isNaN(parseInt(mode))) {
       res.end(data.slice(0, mode));
-    } else if (mode == 'hash') {
-      var hash = crypto.createHash('sha1');
-      hash.update(data);
-      res.end(hash.digest());
     } else if (mode == 'status') {
       res.end();
     } else {
