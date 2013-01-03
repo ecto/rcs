@@ -29,8 +29,6 @@ function serve (req, res) {
 
     if (!isNaN(parseInt(mode))) {
       res.end(data.slice(0, mode));
-    } else if (mode == 'status') {
-      res.end();
     } else {
       res.end(data);
     }
