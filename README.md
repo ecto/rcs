@@ -4,7 +4,7 @@ RCS (Random Character Server) serves `/dev/urandom` over HTTPS to provide entrop
 
 # usage
 
-Clone this repository and run `node rcs` from the directory.
+Clone this repository and run `node server` from the directory.
 
 You should generate your own SSL certificate, but the `example.pfx` file will work for demonstration purposes.
 
